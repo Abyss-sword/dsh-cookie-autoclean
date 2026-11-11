@@ -1,6 +1,6 @@
 # DSH cookie autoclean（插件版，v2.2）
 
-**[English](README.md) | [简体中文](README.zh.md)**
+**[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
 
 DSH 桌面插件：**每次会话结束后自动清理**堆积的 `dsh-auth-*` 回环 cookie，避免启动时报
 `desktop welcome: Web authentication failed`（HTTP 431）。

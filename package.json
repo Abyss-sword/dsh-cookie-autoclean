@@ -38,6 +38,8 @@
     "icon.svg",
     "README.md",
     "README.zh.md",
+    "README.ja.md",
+    "README.ko.md",
     "看日志.cmd"
   ],
   "dsh": {

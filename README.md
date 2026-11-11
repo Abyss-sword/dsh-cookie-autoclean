@@ -1,6 +1,6 @@
 # DSH cookie autoclean (plugin, v2.2)
 
-**[English](README.md) | [简体中文](README.zh.md)**
+**[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
 
 A DSH desktop plugin that automatically purges accumulated `dsh-auth-*` loopback cookies
 after every session, preventing the startup failure
