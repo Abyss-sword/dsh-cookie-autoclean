@@ -1,0 +1,28 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Syntax check
+        run: |
+          node --check index.js
+          node --check helper.js
+          node --check lib/cleaner.js
+          node --check lib/status.js
+          node --check lib/log.js
+      - name: Cleanup engine tests (synthetic store, real-magnitude timestamps)
+        run: node scripts/test-engine.mjs
+      - name: Backup pruning test
+        run: node scripts/test-prune.mjs
+      - name: Status file test
+        run: node scripts/test-status.mjs
