@@ -1,8 +1,9 @@
 /**
  * Generate market/index.json (DSH plugin-market index format 1) for this plugin.
  *
- * The index pins the current git commit, which is where the release v2.2.0 tag
- * points. Re-run this script after adding a version/tag.
+ * The index pins the current git commit and the package.json version. Re-run
+ * this script (and commit the result) after bumping the version or tagging a
+ * release.
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -12,6 +13,7 @@ import { fileURLToPath } from 'node:url'
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
 const read = (file) => fs.readFileSync(path.join(root, file))
 const commit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim()
+const version = JSON.parse(read('package.json').toString('utf8')).version
 const icon = `data:image/svg+xml;base64,${read('icon.svg').toString('base64')}`
 const publishTimestamp = Math.floor(Date.now() / 1000)
 
@@ -46,7 +48,7 @@ const index = {
       },
       versions: [
         {
-          version: '2.2.0',
+          version,
           publishTimestamp,
           source: {
             type: 'git',

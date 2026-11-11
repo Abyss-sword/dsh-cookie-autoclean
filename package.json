@@ -1,6 +1,6 @@
 {
   "name": "dsh-cookie-autoclean",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "DSH plugin: automatically removes stale dsh-auth-* loopback cookies after every client session, keeping the next start below the 431 threshold.",
   "type": "module",
   "license": "MIT",
