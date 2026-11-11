@@ -37,7 +37,7 @@
     "locale/*.json",
     "icon.svg",
     "README.md",
-    "README.en.md",
+    "README.zh.md",
     "看日志.cmd"
   ],
   "dsh": {
