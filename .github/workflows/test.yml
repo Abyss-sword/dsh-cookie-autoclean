@@ -26,3 +26,5 @@ jobs:
         run: node scripts/test-prune.mjs
       - name: Status file test
         run: node scripts/test-status.mjs
+      - name: Market index format check
+        run: node scripts/validate-market-index.mjs

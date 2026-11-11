@@ -17,6 +17,25 @@ dsh --profile desktop plugin add dsh-cookie-autoclean
 The plugin arms its exit-window helper on every start; no configuration is needed.
 Remove the bundle through Plugin Manager to uninstall.
 
+## Self-hosted plugin-market index
+
+The repository ships a format-1 market index at [market/index.json](market/index.json)
+(the icon is embedded as a data URL, so nothing else needs hosting). Add it to your
+DSH plugin market's index list to browse and install from the Discover page:
+
+```yaml
+- id: plugin-market
+  name: "@deepseek-ai/dsh-plugin-market"
+  config:
+    indexes:
+      - https://cdn.jsdelivr.net/gh/Abyss-sword/dsh-cookie-autoclean@main/market/index.json
+```
+
+`raw.githubusercontent.com` works too; jsDelivr is the mirror. The index pins a git
+commit — after publishing a new version, re-run `node scripts/gen-market-index.mjs`
+and commit the update (`scripts/validate-market-index.mjs` validates it against the
+official format-1 rules).
+
 ## Why in-process cleanup is impossible
 
 - While the client runs, Chromium holds the cookie database (`Network\Cookies`)

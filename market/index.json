@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Abyss-sword DSH plugins",
+    "zh-cn": "Abyss-sword DSH 插件"
+  },
+  "description": {
+    "en": "DSH desktop plugins maintained by Abyss-sword.",
+    "zh-cn": "Abyss-sword 维护的 DSH 桌面插件。"
+  },
+  "metadata": {
+    "categories": {
+      "desktop": {
+        "title": {
+          "en": "Desktop & Apps",
+          "zh-cn": "桌面与应用"
+        }
+      },
+      "utility": {
+        "title": {
+          "en": "Utilities",
+          "zh-cn": "工具"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-cookie-autoclean",
+      "title": {
+        "en": "dsh-cookie-autoclean",
+        "zh-cn": "DSH cookie 自动清理"
+      },
+      "description": {
+        "en": "Automatically purges stale dsh-auth-* loopback cookies after every client session, preventing the HTTP 431 startup failure.",
+        "zh-cn": "每次会话退出后自动清理堆积的 dsh-auth-* 回环 cookie，避免 HTTP 431 启动失败。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzRiN2JlYyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZjU0YzQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxjaXJjbGUgY3g9IjI5IiBjeT0iMzQiIHI9IjE3IiBmaWxsPSIjZThiOTZmIiBzdHJva2U9IiM4YTVhMjQiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjI1IiBjeT0iMjkiIHI9IjMiIGZpbGw9IiM2YjQ0MjMiLz4KICA8Y2lyY2xlIGN4PSIzMyIgY3k9IjI2IiByPSIyLjUiIGZpbGw9IiM2YjQ0MjMiLz4KICA8Y2lyY2xlIGN4PSIzNCIgY3k9IjM3IiByPSIyLjUiIGZpbGw9IiM2YjQ0MjMiLz4KICA8Y2lyY2xlIGN4PSIyMyIgY3k9IjM4IiByPSIyIiBmaWxsPSIjNmI0NDIzIi8+CiAgPHBhdGggZD0iTTQ4IDEwIGwyLjIgNS44IDUuOCAyLjIgLTUuOCAyLjIgLTIuMiA1LjggLTIuMiAtNS44IC01LjggLTIuMiA1LjggLTIuMiB6IiBmaWxsPSIjZmZmZmZmIi8+Cjwvc3ZnPgo=",
+      "author": "Abyss-sword",
+      "homepage": "https://github.com/Abyss-sword/dsh-cookie-autoclean#readme",
+      "repository": {
+        "url": "https://github.com/Abyss-sword/dsh-cookie-autoclean"
+      },
+      "metadata": {
+        "category": "desktop",
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "deepseek-harness",
+          "cookie",
+          "autoclean",
+          "desktop"
+        ]
+      },
+      "versions": [
+        {
+          "version": "2.2.0",
+          "publishTimestamp": 1794359478,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Abyss-sword/dsh-cookie-autoclean",
+            "commit": "2c73be7635ccf11f9d1fda18c816e68f3fae1c4f"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1"
+          }
+        }
+      ]
+    }
+  ]
+}

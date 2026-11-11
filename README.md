@@ -15,6 +15,23 @@ dsh --profile desktop plugin add dsh-cookie-autoclean
 
 安装后会自动挂起退出窗口守护进程，无需任何配置。卸载用 Plugin Manager 移除该 bundle 即可。
 
+## 插件市场索引（自建）
+
+本仓库自带一个 format 1 的市场索引 [market/index.json](market/index.json)（图标以 data URL 内嵌，不依赖外链）。
+把它加入 DSH 插件市场的索引列表，即可在 Discover 页浏览并一键安装：
+
+```yaml
+- id: plugin-market
+  name: "@deepseek-ai/dsh-plugin-market"
+  config:
+    indexes:
+      - https://cdn.jsdelivr.net/gh/Abyss-sword/dsh-cookie-autoclean@main/market/index.json
+```
+
+`raw.githubusercontent.com` 同路径也可，国内镜像推荐 jsDelivr。索引里的版本固定到 git commit；
+发布新版本时重跑 `node scripts/gen-market-index.mjs` 并提交（`scripts/validate-market-index.mjs` 按官方
+format 1 规则校验）。
+
 ## 原理（为什么不能在启动时直接删）
 
 - 客户端运行时，Chromium 以「不给共享读」的方式独占 cookie 库（`Network\Cookies`），谁也别想打开；
