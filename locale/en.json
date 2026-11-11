@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH cookie autoclean",
+    "description": "Arms a detached cleaner that purges stale dsh-auth-* loopback cookies once the client fully exits, preventing the 431 startup failure."
+  }
+}

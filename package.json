@@ -1,0 +1,47 @@
+{
+  "name": "dsh-cookie-autoclean",
+  "version": "2.2.0",
+  "description": "DSH plugin: automatically removes stale dsh-auth-* loopback cookies after every client session, keeping the next start below the 431 threshold.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Abyss-sword",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "cookie",
+    "autoclean",
+    "desktop"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Abyss-sword/dsh-cookie-autoclean.git"
+  },
+  "homepage": "https://github.com/Abyss-sword/dsh-cookie-autoclean",
+  "engines": {
+    "dsh": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "helper.js",
+    "lib/cleaner.js",
+    "lib/status.js",
+    "lib/log.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "看日志.cmd"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

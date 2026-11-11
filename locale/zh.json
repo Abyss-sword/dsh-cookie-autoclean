@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH cookie 自动清理",
+    "description": "每次启动时挂起一个独立清理进程，在客户端完全退出后自动删除回环域名下多余的 dsh-auth-* cookie，防止 Cookie 请求头超限导致 431 启动失败。"
+  }
+}

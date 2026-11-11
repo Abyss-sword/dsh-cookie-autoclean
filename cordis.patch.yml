@@ -1,0 +1,6 @@
+# Bundle patch layer: the row loads the package's main entry as the host half
+# (a plain Cordis plugin). No Client half is needed; cleanup runs in the DSH
+# host Node process and, for the exit window, in a detached WMI-started helper.
+- insert:
+    - id: dsh-cookie-autoclean
+      name: 'dsh-cookie-autoclean'
