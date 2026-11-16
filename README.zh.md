@@ -1,6 +1,6 @@
 # DSH cookie autoclean（插件版，v2.2）
 
-**[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
+**[English](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.md) | [日本語](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.ja.md) | [한국어](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.ko.md) | [简体中文](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.zh.md)**
 
 > **⚠️ 上游状态：已修复。** DSH **0.2.2-rc.3 及之后**不再签发 `dsh-auth-*` cookie
 > （Electron 壳的 `net.fetch` cookie jar 路径已移除），HTTP 431 启动失败已在上游解决。

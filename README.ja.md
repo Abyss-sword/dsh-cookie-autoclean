@@ -1,6 +1,6 @@
 # DSH cookie autoclean（プラグイン版 v2.2）
 
-**[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
+**[English](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.md) | [日本語](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.ja.md) | [한국어](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.ko.md) | [简体中文](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.zh.md)**
 
 > **⚠️ 上流のステータス：修正済み。** DSH **0.2.2-rc.3 以降**は `dsh-auth-*` Cookie を
 > 発行しません（Electron シェルの `net.fetch` cookie jar 経路は削除済み）。HTTP 431 の起動問題は

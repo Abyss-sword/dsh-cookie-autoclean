@@ -1,6 +1,6 @@
 # DSH cookie autoclean (plugin, v2.2)
 
-**[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
+**[English](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.md) | [日本語](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.ja.md) | [한국어](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.ko.md) | [简体中文](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.zh.md)**
 
 > **⚠️ Upstream status: fixed.** DSH **0.2.2-rc.3 and later** no longer mint `dsh-auth-*`
 > cookies (the Electron shell's `net.fetch` cookie-jar path was removed), so the HTTP 431

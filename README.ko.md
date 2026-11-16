@@ -1,6 +1,6 @@
 # DSH cookie autoclean (플러그인, v2.2)
 
-**[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
+**[English](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.md) | [日本語](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.ja.md) | [한국어](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.ko.md) | [简体中文](https://github.com/Abyss-sword/dsh-cookie-autoclean/blob/main/README.zh.md)**
 
 > **⚠️ 업스트림 상태: 수정됨.** DSH **0.2.2-rc.3 이후** 버전은 더 이상 `dsh-auth-*` 쿠키를
 > 발급하지 않습니다(Electron 셸의 `net.fetch` cookie jar 경로 제거됨). HTTP 431 시작 문제는

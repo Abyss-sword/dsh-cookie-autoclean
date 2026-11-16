@@ -35,8 +35,8 @@ const index = {
       name: 'dsh-cookie-autoclean',
       title: { en: 'dsh-cookie-autoclean', 'zh-cn': 'DSH cookie 自动清理' },
       description: {
-        en: 'Automatically purges stale dsh-auth-* loopback cookies after every client session, preventing the HTTP 431 startup failure.',
-        'zh-cn': '每次会话退出后自动清理堆积的 dsh-auth-* 回环 cookie，避免 HTTP 431 启动失败。',
+        en: 'Automatically purges stale dsh-auth-* loopback cookies after every client session. Note: DSH 0.2.2-rc.3+ fixed the upstream cookie issue, so this plugin is now a no-op safety net.',
+        'zh-cn': '每次会话后自动清理堆积的 dsh-auth-* 回环 cookie。注意：DSH 0.2.2-rc.3+ 已在上游修复该问题，本插件现为可选保险。',
       },
       icon,
       author: 'Abyss-sword',
