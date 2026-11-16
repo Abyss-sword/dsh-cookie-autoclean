@@ -54,12 +54,12 @@
       },
       "versions": [
         {
-          "version": "2.2.1",
-          "publishTimestamp": 1794415436,
+          "version": "2.2.2",
+          "publishTimestamp": 1794801696,
           "source": {
             "type": "git",
             "url": "https://github.com/Abyss-sword/dsh-cookie-autoclean",
-            "commit": "4c83807abe8ff5d37a8a2a2a5d414935f4917294"
+            "commit": "236fed6107dccf85e0bc9079c52cddb23b99b2da"
           },
           "engines": {
             "dsh": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1"
