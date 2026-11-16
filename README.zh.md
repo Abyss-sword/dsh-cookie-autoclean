@@ -2,6 +2,10 @@
 
 **[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
 
+> **⚠️ 上游状态：已修复。** DSH **0.2.2-rc.3 及之后**不再签发 `dsh-auth-*` cookie
+> （Electron 壳的 `net.fetch` cookie jar 路径已移除），HTTP 431 启动失败已在上游解决。
+> 本插件仍可正常运行，但只是**空转的保险**——保留或卸载都可以；仅对更早的 DSH（< 0.2.2-rc.3）有实际作用。
+
 DSH 桌面插件：**每次会话结束后自动清理**堆积的 `dsh-auth-*` 回环 cookie，避免启动时报
 `desktop welcome: Web authentication failed`（HTTP 431）。
 
@@ -102,10 +106,6 @@ format 1 规则校验）。
 副作用大于收益。现在完全依赖「每次退出清空」——每 session 结束时 cookie 被清光，下次启动只签发 1 条。
 
 ## 兼容性与免责
-
-> **DSH 0.2.2-rc.3 起上游 welcome 流程不再签发 `dsh-auth-*` cookie（Electron 壳的
-> `net.fetch` cookie jar 路径已移除），431 问题已在上游修复。在 rc.3+ 上本插件正常运行但空转，
-> 可作为可选保险保留，也可以直接卸载。**
 
 - 依赖 DSH 桌面客户端的未公开实现细节（Chromium cookie 库布局、`dsh-auth-*` 命名、
   进程树退出行为、WMI 启动不受进程树影响）。**DSH 升级后这里的行为可能变化**，

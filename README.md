@@ -2,6 +2,11 @@
 
 **[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
 
+> **⚠️ Upstream status: fixed.** DSH **0.2.2-rc.3 and later** no longer mint `dsh-auth-*`
+> cookies (the Electron shell's `net.fetch` cookie-jar path was removed), so the HTTP 431
+> startup failure is resolved upstream. This plugin still runs but is a **no-op safety net** —
+> keep it or remove it freely; it only has a real effect on older DSH versions (< 0.2.2-rc.3).
+
 A DSH desktop plugin that automatically purges accumulated `dsh-auth-*` loopback cookies
 after every session, preventing the startup failure
 `desktop welcome: Web authentication failed` (HTTP 431).
@@ -127,11 +132,6 @@ than the configured lifetime starts receiving 401s. The plugin now relies entire
 exactly one.
 
 ## Compatibility and disclaimer
-
-> **Since DSH 0.2.2-rc.3 the upstream welcome flow no longer mints `dsh-auth-*` cookies
-> (the Electron shell's `net.fetch` cookie-jar path was removed), so the 431 issue is
-> fixed upstream. On rc.3+ this plugin runs normally but is a no-op insurance and can be
-> kept or removed.**
 
 - Depends on unpublished implementation details of the DSH desktop client (Chromium
   cookie-store layout, `dsh-auth-*` naming, process-tree teardown on quit, and the fact

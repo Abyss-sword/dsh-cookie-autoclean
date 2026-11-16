@@ -2,6 +2,11 @@
 
 **[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
 
+> **⚠️ 上流のステータス：修正済み。** DSH **0.2.2-rc.3 以降**は `dsh-auth-*` Cookie を
+> 発行しません（Electron シェルの `net.fetch` cookie jar 経路は削除済み）。HTTP 431 の起動問題は
+> 上流で解決済みです。本プラグインは正常に動作しますが、実質何もせず**保険**としてのみ機能します——
+> 残すか削除するかは自由です。実際に役立つのは古い DSH（< 0.2.2-rc.3）だけです。
+
 DSH デスクトップ用プラグインです。セッションが終了するたびに、たまり続ける `dsh-auth-*` ループバック Cookie を
 自動で削除し、起動時の `desktop welcome: Web authentication failed`（HTTP 431）を防ぎます。
 
@@ -113,10 +118,6 @@ dsh --profile desktop plugin add dsh-cookie-autoclean
 各セッションは Cookie ゼロで終わり、次の起動でちょうど 1 個だけ発行されます。
 
 ## 互換性と免責
-
-> **DSH 0.2.2-rc.3 以降、上流の welcome フローは `dsh-auth-*` Cookie を発行しなくなりました
-> （Electron シェルの `net.fetch` cookie jar 経路が削除済み）。431 問題は上流で修正されています。
-> rc.3+ では本プラグインは正常に動作しますが何もせず、保険として残しても削除してもかまいません。**
 
 - DSH デスクトップクライアントの非公開実装詳細に依存しています（Chromium Cookie ストアのレイアウト、`dsh-auth-*` の命名、
   終了時のプロセスツリー解体、WMI 起動プロセスがアプリのツリー外であること）。**DSH のアップグレードで挙動が

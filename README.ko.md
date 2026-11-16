@@ -2,6 +2,11 @@
 
 **[English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh.md)**
 
+> **⚠️ 업스트림 상태: 수정됨.** DSH **0.2.2-rc.3 이후** 버전은 더 이상 `dsh-auth-*` 쿠키를
+> 발급하지 않습니다(Electron 셸의 `net.fetch` cookie jar 경로 제거됨). HTTP 431 시작 문제는
+> 업스트림에서 해결되었습니다. 이 플러그인은 정상 동작하지만 실제로는 아무것도 하지 않는
+> **보험**일 뿐입니다——남기거나 제거해도 됩니다. 실제로 필요한 것은 구버전 DSH(< 0.2.2-rc.3)뿐입니다.
+
 DSH 데스크톱 플러그인입니다. 세션이 끝날 때마다 누적되는 `dsh-auth-*` 루프백 쿠키를 자동으로 정리하여,
 시작 시 `desktop welcome: Web authentication failed`(HTTP 431) 오류가 발생하는 것을 막습니다.
 
@@ -113,10 +118,6 @@ dsh --profile desktop plugin add dsh-cookie-autoclean
 각 세션은 쿠키 0개로 끝나고 다음 시작에서 정확히 1개만 발급됩니다.
 
 ## 호환성 및 면책
-
-> **DSH 0.2.2-rc.3부터 업스트림 welcome 흐름은 더 이상 `dsh-auth-*` 쿠키를 발급하지 않습니다
-> (Electron 셸의 `net.fetch` cookie jar 경로 제거됨). 431 문제는 업스트림에서 수정되었습니다.
-> rc.3+에서 이 플러그인은 정상 동작하지만 아무것도 하지 않는 보험으로 남기거나 제거해도 됩니다.**
 
 - DSH 데스크톱 클라이언트의 비공개 구현 세부 사항에 의존합니다(Chromium 쿠키 저장소 레이아웃, `dsh-auth-*` 명명,
   종료 시 프로세스 트리 해체, WMI로 시작한 프로세스가 앱 트리 밖이라는 점). **DSH 업그레이드로 동작이 바뀔 수
