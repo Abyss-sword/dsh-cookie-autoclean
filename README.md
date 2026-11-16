@@ -128,6 +128,11 @@ exactly one.
 
 ## Compatibility and disclaimer
 
+> **Since DSH 0.2.2-rc.3 the upstream welcome flow no longer mints `dsh-auth-*` cookies
+> (the Electron shell's `net.fetch` cookie-jar path was removed), so the 431 issue is
+> fixed upstream. On rc.3+ this plugin runs normally but is a no-op insurance and can be
+> kept or removed.**
+
 - Depends on unpublished implementation details of the DSH desktop client (Chromium
   cookie-store layout, `dsh-auth-*` naming, process-tree teardown on quit, and the fact
   that WMI-started processes are outside the app tree). **DSH upgrades may change this

@@ -114,6 +114,10 @@ dsh --profile desktop plugin add dsh-cookie-autoclean
 
 ## 互換性と免責
 
+> **DSH 0.2.2-rc.3 以降、上流の welcome フローは `dsh-auth-*` Cookie を発行しなくなりました
+> （Electron シェルの `net.fetch` cookie jar 経路が削除済み）。431 問題は上流で修正されています。
+> rc.3+ では本プラグインは正常に動作しますが何もせず、保険として残しても削除してもかまいません。**
+
 - DSH デスクトップクライアントの非公開実装詳細に依存しています（Chromium Cookie ストアのレイアウト、`dsh-auth-*` の命名、
   終了時のプロセスツリー解体、WMI 起動プロセスがアプリのツリー外であること）。**DSH のアップグレードで挙動が
   変わる可能性**があるため、ログで `cleaned` が出続けるか確認してください。

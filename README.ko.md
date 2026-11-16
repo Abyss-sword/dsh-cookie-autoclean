@@ -114,6 +114,10 @@ dsh --profile desktop plugin add dsh-cookie-autoclean
 
 ## 호환성 및 면책
 
+> **DSH 0.2.2-rc.3부터 업스트림 welcome 흐름은 더 이상 `dsh-auth-*` 쿠키를 발급하지 않습니다
+> (Electron 셸의 `net.fetch` cookie jar 경로 제거됨). 431 문제는 업스트림에서 수정되었습니다.
+> rc.3+에서 이 플러그인은 정상 동작하지만 아무것도 하지 않는 보험으로 남기거나 제거해도 됩니다.**
+
 - DSH 데스크톱 클라이언트의 비공개 구현 세부 사항에 의존합니다(Chromium 쿠키 저장소 레이아웃, `dsh-auth-*` 명명,
   종료 시 프로세스 트리 해체, WMI로 시작한 프로세스가 앱 트리 밖이라는 점). **DSH 업그레이드로 동작이 바뀔 수
   있으므로** 로그에서 `cleaned`가 계속 나오는지 확인하세요.
