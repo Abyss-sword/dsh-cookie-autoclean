@@ -32,8 +32,8 @@
         "zh-cn": "DSH cookie 自动清理"
       },
       "description": {
-        "en": "Automatically purges stale dsh-auth-* loopback cookies after every client session, preventing the HTTP 431 startup failure.",
-        "zh-cn": "每次会话退出后自动清理堆积的 dsh-auth-* 回环 cookie，避免 HTTP 431 启动失败。"
+        "en": "Automatically purges stale dsh-auth-* loopback cookies after every client session. Note: DSH 0.2.2-rc.3+ fixed the upstream cookie issue, so this plugin is now a no-op safety net.",
+        "zh-cn": "每次会话后自动清理堆积的 dsh-auth-* 回环 cookie。注意：DSH 0.2.2-rc.3+ 已在上游修复该问题，本插件现为可选保险。"
       },
       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzRiN2JlYyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZjU0YzQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxjaXJjbGUgY3g9IjI5IiBjeT0iMzQiIHI9IjE3IiBmaWxsPSIjZThiOTZmIiBzdHJva2U9IiM4YTVhMjQiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjI1IiBjeT0iMjkiIHI9IjMiIGZpbGw9IiM2YjQ0MjMiLz4KICA8Y2lyY2xlIGN4PSIzMyIgY3k9IjI2IiByPSIyLjUiIGZpbGw9IiM2YjQ0MjMiLz4KICA8Y2lyY2xlIGN4PSIzNCIgY3k9IjM3IiByPSIyLjUiIGZpbGw9IiM2YjQ0MjMiLz4KICA8Y2lyY2xlIGN4PSIyMyIgY3k9IjM4IiByPSIyIiBmaWxsPSIjNmI0NDIzIi8+CiAgPHBhdGggZD0iTTQ4IDEwIGwyLjIgNS44IDUuOCAyLjIgLTUuOCAyLjIgLTIuMiA1LjggLTIuMiAtNS44IC01LjggLTIuMiA1LjggLTIuMiB6IiBmaWxsPSIjZmZmZmZmIi8+Cjwvc3ZnPgo=",
       "author": "Abyss-sword",
@@ -54,12 +54,12 @@
       },
       "versions": [
         {
-          "version": "2.2.2",
-          "publishTimestamp": 1794801696,
+          "version": "2.2.3",
+          "publishTimestamp": 1794803216,
           "source": {
             "type": "git",
             "url": "https://github.com/Abyss-sword/dsh-cookie-autoclean",
-            "commit": "236fed6107dccf85e0bc9079c52cddb23b99b2da"
+            "commit": "f852bad4b690edaad6898b11b956195f15b4c9dc"
           },
           "engines": {
             "dsh": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1"
